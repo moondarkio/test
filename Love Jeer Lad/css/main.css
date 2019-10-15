@@ -1,0 +1,208 @@
+* {
+				margin: 0;
+				padding: 0;
+				list-style-type: none;
+			}
+			
+			@media only screen and (max-width: 500px) {
+				body {
+					background-color: lightblue;
+				}
+			}
+			/*——————————头部——————————*/
+			
+			#header {
+				width: 100%;
+				height: 80px;
+				background-color: #7e7e7e;
+				margin: auto;
+			}
+			
+			#menu {
+				width: 1000px;
+				height: 80px;
+				margin: auto;
+			}
+			
+			#menu img {
+				float: left;
+				cursor: pointer;
+			}
+			
+			#menu ul li {
+				width: 125px;
+				height: 80px;
+				line-height: 80px;
+				float: right;
+				color: white;
+				text-align: center;
+				cursor: pointer;
+			}
+			
+			#menu ul li:hover {
+				background-color: #acacac;
+			}
+			
+			/*——————————中间——————————*/
+			#page {
+				margin: auto;
+				width: 100%;
+				height: 650px;
+				background: url("../images/sea.jpg");
+				background-size: 100% 100%;
+				background-repeat: no-repeat;
+			}
+			
+			#page_k {
+				width: 1160px;
+				height: 650px;
+				/*				border:1px solid red;*/
+				margin: auto;
+				position: relative;
+			}
+			
+			#page_phone .phone1 {
+				float: left;
+				position: absolute;
+				z-index: 2;
+			}
+			
+			#page_phone .phone2 {
+				float: left;
+				position: absolute;
+				left: 180px;
+				top: 40px;
+				z-index: 1;
+			}
+			
+			#page_info {
+				position: absolute;
+				right: 0;
+				top: 100px
+			}
+			
+			#page_ma {
+				width: 390px;
+				height: 170px;
+				/*border: 1px solid red;*/
+				margin-top: 150px;
+				margin-left: 100px;
+			}
+			
+			#page_ma img {
+				width: 170px;
+				height: 170px;
+			}
+			
+			#page_ma a {
+				position: relative;
+				display: block;
+				width: 120px;
+				height: 50px;
+				float: right;
+				text-decoration: none;
+				color: white;
+				margin-top: 60px;
+				line-height: 50px;
+				text-align: right;
+				padding-right: 30px;
+				border: 1px solid white;
+				border-radius: 6px;
+			}
+			
+			#page_ma i {
+				position: absolute;
+				left: 12%;
+				width: 28px;
+				height: 28px;
+				background: url("../images/spritesheet.png");
+				background-repeat: no-repeat;
+				margin: 14px 10px;
+			}
+			/*wave*/
+			
+			.header {
+				position: relative;
+				text-align: center;
+				background: linear-gradient(60deg, rgba(84, 58, 183, 1) 0%, rgba(0, 172, 193, 1) 100%);
+				color: white;
+			}
+			
+			.inner-header {
+				height: 65vh;
+				width: 100%;
+				margin: 0;
+				padding: 0;
+			}
+			
+			.flex {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				text-align: center;
+			}
+			
+			.waves {
+				position: relative;
+				width: 100%;
+				height: 15vh;
+				margin-bottom: -7px;
+				/*Fix for safari gap*/
+				min-height: 100px;
+				max-height: 150px;
+			}
+			
+			.content {
+				position: relative;
+				height: 20vh;
+				text-align: center;
+				background-color: white;
+			}
+			/* Animation */
+			
+			.parallax>use {
+				animation: move-forever 25s cubic-bezier(.55, .5, .45, .5) infinite;
+			}
+			
+			.parallax>use:nth-child(1) {
+				animation-delay: -2s;
+				animation-duration: 7s;
+			}
+			
+			.parallax>use:nth-child(2) {
+				animation-delay: -3s;
+				animation-duration: 10s;
+			}
+			
+			.parallax>use:nth-child(3) {
+				animation-delay: -4s;
+				animation-duration: 13s;
+			}
+			
+			.parallax>use:nth-child(4) {
+				animation-delay: -5s;
+				animation-duration: 20s;
+			}
+			
+			@keyframes move-forever {
+				0% {
+					transform: translate3d(-90px, 0, 0);
+				}
+				100% {
+					transform: translate3d(85px, 0, 0);
+				}
+			}
+			/*Shrinking for mobile*/
+			
+			@media (max-width: 768px) {
+				.waves {
+					height: 40px;
+					min-height: 40px;
+				}
+				.content {
+					height: 30vh;
+				}
+				h1 {
+					font-size: 24px;
+				}
+			}

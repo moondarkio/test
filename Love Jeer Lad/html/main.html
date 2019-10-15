@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<!--<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+        <meta name="format-detection" content="telephone=yes" />
+        <meta name="msapplication-tap-highlight" content="no" />
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge，chrome=1">-->
+		<link rel="Shortcut Icon" href="../images/favicon.ico" type="image/x-icon">
+		<meta charset="UTF-8">
+		<title>app下载</title>
+		<style type="text/css">
+			* {
+				margin: 0;
+				padding: 0;
+				list-style-type: none;
+			}
+			
+			@media only screen and (max-width: 500px) {
+				body {
+					background-color: lightblue;
+				}
+			}
+			
+			@media only screen and (min-width: 750px) and (max-width: 1200px) {
+				* {
+					margin: 0px;
+					padding: 0px;
+				}
+				#page {
+					margin: auto;
+					width: 100px;
+					height: 650px;
+					background: url("../images/sea.jpg");
+					background-size: 100% 100%;
+					background-repeat: no-repeat;
+				}
+				#page_ma img {
+					width: 120px;
+					height: 120px;
+				}
+				#page_phone .phone1 {
+					float: left;
+					position: absolute;
+					margin-left: 126px;
+					margin-top: 126px;
+					z-index: 2;
+					height: 400px;
+					width: 200px;
+				}
+				#page_phone .phone2 {
+					float: left;
+					position: absolute;
+					margin-top: 120px;
+					left: 180px;
+					top: 40px;
+					z-index: 1;
+					height: 400px;
+					width: 200px;
+				}
+				#menu img {
+					margin-left: 60px;
+				}
+				#page_info img {
+					width: 294px;
+					height: 96px;
+				}
+				#page_info {
+					position: absolute;
+					right: 0;
+					top: 100px;
+					margin-right: 10px;
+					margin-top: 20px;
+				}
+			
+				#page_ma img {
+					width: 120px;
+					height: 120px;
+					margin-left: 80px;
+					margin-top: -30px;
+				}
+				#page_ma a {
+					position: relative;
+					display: block;
+					width: 120px;
+					height: 50px;
+					float: right;
+					text-decoration: none;
+					color: white;
+					margin-top: 100px;
+					line-height: 50px;
+					text-align: right;
+					padding-right: 30px;
+					border: 1px solid white;
+					border-radius: 6px;
+				}
+				#page_ma i {
+					position: absolute;
+					left: 12%;
+					width: 28px;
+					height: 28px;
+					background: url("../images/spritesheet.png");
+					background-repeat: no-repeat;
+					margin: 14px 10px;
+				}
+			}
+			/*——————————头部——————————*/
+			#header {
+				width: 100%;
+				height: 80px;
+				background-color: cornflowerblue;
+				margin: auto;
+			}
+			#menu {
+				width: 1000px;
+				height: 80px;
+				margin: auto;
+			}
+			
+			#menu img {
+				float: left;
+				cursor: pointer;
+			}
+			
+			#menu ul li {
+				width: 125px;
+				height: 80px;
+				line-height: 80px;
+				float: right;
+				color: white;
+				text-align: center;
+				cursor: pointer;
+			}
+			
+			#menu ul li:hover {
+				background-color: #acacac;
+			}
+			/*——————————中间——————————*/
+			
+			#page {
+				margin: auto;
+				width: 100%;
+				height: 650px;
+				background: url("../images/sea.jpg");
+				background-size: 100% 100%;
+				background-repeat: no-repeat;
+			}
+			
+			#page_k {
+				width: 1100px;
+				height: 650px;
+				/*				border:1px solid red;*/
+				margin: auto;
+				position: relative;
+			}
+			
+			#page_phone .phone1 {
+				float: left;
+				position: absolute;
+				z-index: 2;
+			}
+			
+			#page_phone .phone2 {
+				float: left;
+				position: absolute;
+				left: 180px;
+				top: 40px;
+				z-index: 1;
+			}
+			
+			#page_info {
+				position: absolute;
+				right: 0;
+				top: 100px
+			}
+			
+			#page_ma {
+				width: 390px;
+				height: 170px;
+				/*border: 1px solid red;*/
+				margin-top: 150px;
+				margin-left: 100px;
+			}
+			
+			#page_ma img {
+				width: 170px;
+				height: 170px;
+			}
+			
+			#page_ma a {
+				position: relative;
+				display: block;
+				width: 120px;
+				height: 50px;
+				float: right;
+				text-decoration: none;
+				color: white;
+				margin-top: 100px;
+				line-height: 50px;
+				text-align: right;
+				padding-right: 30px;
+				border: 1px solid white;
+				border-radius: 6px;
+			}
+			
+			#page_ma i {
+				position: absolute;
+				left: 12%;
+				width: 28px;
+				height: 28px;
+				background: url("../images/spritesheet.png");
+				background-repeat: no-repeat;
+				margin: 14px 10px;
+			}
+			/*wave*/
+			
+			.headers {
+				position: relative;
+				text-align: center;
+				/*background: linear-gradient(60deg, rgba(84, 58, 183, 1) 0%, rgba(0, 172, 193, 1) 100%);	rgb(137,194,214),*/
+				background: linear-gradient(60deg, rgb(67, 164, 229) 0%, rgb(74, 140, 184) 100%);
+				color: white;
+			}
+			
+			.inner-header {
+				height: 65vh;
+				width: 100%;
+				margin: 0;
+				padding: 0;
+			}
+			
+			.flex {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				text-align: center;
+			}
+			
+			.waves {
+				position: relative;
+				width: 100%;
+				height: 15vh;
+				margin-bottom: -7px;
+				/*Fix for safari gap*/
+				min-height: 100px;
+				max-height: 150px;
+			}
+			
+			.content {
+				position: relative;
+				height: 20vh;
+				text-align: center;
+				background-color: white;
+			}
+			/* Animation */
+			
+			.parallax>use {
+				animation: move-forever 25s cubic-bezier(.55, .5, .45, .5) infinite;
+			}
+			
+			.parallax>use:nth-child(1) {
+				animation-delay: -2s;
+				animation-duration: 7s;
+			}
+			
+			.parallax>use:nth-child(2) {
+				animation-delay: -3s;
+				animation-duration: 10s;
+			}
+			
+			.parallax>use:nth-child(3) {
+				animation-delay: -4s;
+				animation-duration: 13s;
+			}
+			
+			.parallax>use:nth-child(4) {
+				animation-delay: -5s;
+				animation-duration: 20s;
+			}
+			
+			@keyframes move-forever {
+				0% {
+					transform: translate3d(-90px, 0, 0);
+				}
+				100% {
+					transform: translate3d(85px, 0, 0);
+				}
+			}
+			/*Shrinking for mobile*/
+			
+			@media (max-width: 768px) {
+				.waves {
+					height: 40px;
+					min-height: 40px;
+				}
+				.content {
+					height: 30vh;
+				}
+				h1 {
+					font-size: 24px;
+				}
+			}
+		</style>
+		<script type="text/javascript">
+			/*window.setFontSize = function(){
+				var size = document.documentElement.clientWidth / 750* 100;
+				document.documentElement.style.fontSize = size.toString() +"px";
+			};
+			setFontSize();
+			$(window).resize(function(){
+				setFontSize(;)
+			});*/
+		</script>
+	</head>
+
+	<body>
+		<!--topbar-->
+		<div id="header">
+			<div id="menu">
+				<img src="../images/logo.png" alt="皮皮虾官方网站"></img>
+				<ul>
+					<li>官网论坛</li>
+					<li>最新动态</li>
+					<li>软件介绍</li>
+					<li>App下载</li>
+				</ul>
+			</div>
+		</div>
+
+		<!--content-->
+		<div id="page">
+			<div id="page_k">
+				<div id="page_phone">
+					<img src="../images/phone1.png" class="phone1" />
+					<img src="../images/phone2.png" class="phone2" />
+				</div>
+				<div id="page_info">
+					<img src="../images/text.png" />
+					<div id="page_ma">
+						<img src="../images/rrx.png" />
+						<a href="#"><i></i>Android</a>
+					</div>
+				</div>
+			</div>
+			<!--<iframe border=0 height=492 width=276 src='https://m.rrxiu.net/?v=j55pm4&mv=1' style="position: absolute;top:19%;left:21.8%;z-index:10"></iframe>
+			<iframe border=0 height=418 width=276 src='https://m.rrxiu.net/?v=j55pm4&mv=1' style="position: absolute;top:22%;left:28.9%;z-index:1"></iframe>-->
+		</div>
+
+		<!--footer-->
+		<div class="headers">
+			<div>
+				<svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+					<defs>
+						<path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+					</defs>
+					<g class="parallax">
+						<use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(255,255,255,0.7" />
+						<use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,0.5)" />
+						<use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(255,255,255,0.3)" />
+						<use xlink:href="#gentle-wave" x="48" y="7" fill="#fff" />
+					</g>
+				</svg>
+			</div>
+		</div>
+	</body>
+
+</html>
